@@ -27,7 +27,7 @@ export async function handler(event: SNSEvent, context: Context): Promise<void> 
 }
 
 function createEvent(body: SNSMessage ) {
-    const  envelope = JSON.parse(body.Message) as Envelope
+    const envelope = JSON.parse(body.Message) as Envelope
     const event = JSON.parse(envelope.data) as OrderEvent
 
     console.log(`Order event - MessageId: ${body.MessageId}`)
