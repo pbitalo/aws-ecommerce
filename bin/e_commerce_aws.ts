@@ -79,6 +79,7 @@ const invoicesAppLayersStack = new InvoicesAppLayersStack(app,"InvoicesAppLayer"
 })
 
 const invoiceWSApiStack = new InvoiceWSApiStack(app,"InvoiceApi", {
+  eventsDdb: eventsDdbStack.table,
   tags: {
     cost: "InvoiceApp",
     team: "SiecolaCode"
